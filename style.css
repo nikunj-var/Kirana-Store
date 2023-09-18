@@ -5,8 +5,12 @@
 nav{
     font-family: Georgia, serif;
 }
+body{
+    height: 1000vh;
+}
 .main-page{
-  
+    background-size: cover;
+    background-attachment: fixed;
     display: flex; 
     text-align: center;
     height: 80vh;  
@@ -15,7 +19,12 @@ nav{
     width: 100%;
     height: 100%;
     border-top-right-radius: 50%;
-    
+    /* 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveOut 5s ease-in-out forwards; */
 }
 .main-page .main-content{
     width: 50%;
@@ -74,5 +83,73 @@ nav{
 .about-div{
     padding: 3rem;
     /* border: 1px solid grey; */
+    box-sizing: border-box;
     box-shadow: 5px 5px 15px #888888;
 }
+.product-heading{
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+}
+.dryfruit-list{
+    height: 60vh;
+    display: flex;
+    background: url('https://images.pexels.com/photos/5254831/pexels-photo-5254831.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    align-items: center;
+    border-radius: 15%;
+}
+.lentils-list{
+    height: 60vh;
+    display: flex;
+    background: url('https://images.unsplash.com/photo-1579705745811-a32bef7856a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    align-items: center;
+    border-radius: 15%;
+}
+.masala-list{
+    height: 60vh;
+    display: flex;
+    background: url('https://images.pexels.com/photos/4198712/pexels-photo-4198712.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    align-items: center;
+    border-radius: 15%;
+}
+.dryfruit-list::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.598);
+    z-index: 1;
+}
+
+.dryfruits{
+    height: 80%;
+}
+.lentils{
+    height: 80%;
+}
+.masala{
+    height: 80%;
+}
+.dryfruits img,.lentils img,.masala img{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    
+    padding: 1rem;
+    margin: auto;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 50px rgb(171, 167, 167);
+}
+
+
