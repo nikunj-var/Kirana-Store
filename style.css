@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Dancing+Script:wght@500;700&family=Lora&family=Open+Sans:ital,wght@1,300&family=Poppins:wght@100;300;400;800&display=swap');
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid aqua; */
+}
+:root{
+    --heading:#396C72;
+    --text : #888;
 }
 nav{
     font-family: Georgia, serif;
 }
-body{
-    height: 1000vh;
+.nav-link{
+    color: var(--heading);
 }
 .main-page{
     background-size: cover;
@@ -19,12 +26,6 @@ body{
     width: 100%;
     height: 100%;
     border-top-right-radius: 50%;
-    /* 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: moveOut 5s ease-in-out forwards; */
 }
 .main-page .main-content{
     width: 50%;
@@ -36,9 +37,8 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 .main-page p,.about p{
-    color: black;
+    color: var(--text);
     display: inline-block;
     font-size: 1rem;
     font-family: Georgia, serif;
@@ -46,12 +46,12 @@ body{
     text-align: center;
     margin-top: 1rem;
 }
-
 .main-page h2{
     font-family: Cormorant,Garamond;
     box-shadow: 2px 1px 2px #888888;
     font-size: 2rem;
     text-align: center;
+    color: var(--heading);
 }
 .main-page h2 span{
     font-size: 6rem;
@@ -75,6 +75,7 @@ body{
     font-family: 3rem;
     text-align: center;
     text-decoration: dotted;
+    color: var(--heading);
 }
 .about p{
     width: 80%;
@@ -91,6 +92,7 @@ body{
     font-size: 2rem;
     text-align: center;
     text-decoration: underline;
+    color: var(--heading);
 }
 .dryfruit-list{
     height: 60vh;
@@ -100,7 +102,7 @@ body{
     position: relative;
     background-attachment: fixed;
     align-items: center;
-    border-radius: 15%;
+    box-sizing: border-box;
 }
 .lentils-list{
     height: 60vh;
@@ -110,7 +112,7 @@ body{
     position: relative;
     background-attachment: fixed;
     align-items: center;
-    border-radius: 15%;
+
 }
 .masala-list{
     height: 60vh;
@@ -120,7 +122,7 @@ body{
     position: relative;
     background-attachment: fixed;
     align-items: center;
-    border-radius: 15%;
+
 }
 .dryfruit-list::before{
     position: absolute;
@@ -145,7 +147,6 @@ body{
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    
     padding: 1rem;
     margin: auto;
     border-radius: 2rem;
@@ -153,3 +154,125 @@ body{
 }
 
 
+.visit{
+    display: flex;
+}
+.visit-map{
+    height: 70vh;
+
+}
+.visit-map iframe{
+    height: 100%;
+    width: 100%;
+}
+.visit-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.visit-content .address,.visit-content .email,.visit-content .number,.visit-content .timing{
+    display: flex;   
+    margin-left: 2rem;
+}
+ .icon i{
+   font-size: 2rem;
+   color:  #396C72;
+}
+.address-content p,.email-content p,.number-content p,.timing-content p{
+    font-size : 1.2rem;
+    color: gray;
+    letter-spacing: 0.07rem;
+}
+.visit-content h4{
+    letter-spacing: 0.07rem;
+    color:  #396C72;
+}
+.contact{
+    display: flex;
+    margin-top: 5rem;
+}
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 2rem;
+}
+.contact-details input{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 25rem;
+    margin-bottom: 1rem;
+}
+.message{
+    margin: none;
+    padding: none;
+}
+.message textarea{
+   padding: 0.5rem;
+   box-sizing: border-box;
+   height: 10rem;
+   width: 25rem;
+}
+
+@media(max-width:768px){
+    .main-page{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .main-page .main-img1 img{
+        width: 70vw;
+        height: 50vh;
+        margin: 1rem;
+        border-top-right-radius: 0;
+    }
+    .main-page .main-content{
+        width: 100vw;
+        height: auto;
+        box-sizing: border-box;
+       
+    }
+    .about{
+        flex-direction: column;
+        height: auto;
+    }
+    .about .about-img img{
+       border-bottom-right-radius: 0;
+       height: 60vh;
+       width: 70vw;
+       margin: auto;
+       border-radius: 2rem;
+    }
+    .about-div{
+        box-shadow: none;
+    }
+    .dryfruit-list,.lentils-list,.masala-list{
+        height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .dryfruits,.lentils,.masala{  
+        flex-basis: calc(50% - 20px);
+        height: 15rem;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact-details{
+        align-items: center;
+    }
+
+    .visit{
+        flex-direction: column;
+    }
+
+        .visit-content {
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+        
+          .visit-content > div {
+            flex: 1 0 calc(50% - 2rem); /* Make each main div take up half of the container width with some spacing */
+            margin: 0.5rem; 
+          }
+}
