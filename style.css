@@ -59,27 +59,25 @@ nav{
 }
 
 .about{
-    display: flex; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; /* Center-align content vertically */
     text-align: center;
-    height: 77vh;  
+    height: auto; 
 }
 .about .about-img img{
     width: 100%;
-    height: 100%;
+    height: 70vh;
     border-bottom-right-radius:  50%;
 }
 
 .about h2{
     padding-top:2rem;
     font-family: Georgia, serif;
-    font-family: 3rem;
     text-align: center;
     text-decoration: dotted;
     color: var(--heading);
-}
-.about p{
-    width: 80%;
-    text-align: center;
 }
 .about-div{
     padding: 3rem;
@@ -87,6 +85,12 @@ nav{
     box-sizing: border-box;
     box-shadow: 5px 5px 15px #888888;
 }
+.about p{
+    width: 80%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 .product-heading{
     font-family: Georgia, serif;
     font-size: 2rem;
@@ -102,7 +106,6 @@ nav{
     position: relative;
     background-attachment: fixed;
     align-items: center;
-    box-sizing: border-box;
 }
 .lentils-list{
     height: 60vh;
@@ -152,14 +155,11 @@ nav{
     border-radius: 2rem;
     box-shadow: 10px 10px 50px rgb(171, 167, 167);
 }
-
-
 .visit{
     display: flex;
 }
 .visit-map{
     height: 70vh;
-
 }
 .visit-map iframe{
     height: 100%;
@@ -196,16 +196,16 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 2rem;
 }
 .contact-details input{
     padding: 0.5rem;
     border-radius: 0.5rem;
     width: 25rem;
     margin-bottom: 1rem;
+    margin-right: 2rem;
 }
 .message{
-    margin: none;
+    margin: auto;
     padding: none;
 }
 .message textarea{
@@ -213,66 +213,133 @@ nav{
    box-sizing: border-box;
    height: 10rem;
    width: 25rem;
+   margin: auto;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-image: url('./images/img10.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid var(--heading);
+}
+footer h4,i{
+    color: var(--heading);
+}
+footer p{
+    color: var(--text);
+}
+.footer-links p{
+    text-decoration: underline;
 }
 
-@media(max-width:768px){
-    .main-page{
-        flex-direction: column-reverse;
-        height: auto;
-    }
-    .main-page .main-img1 img{
-        width: 70vw;
-        height: 50vh;
-        margin: 1rem;
-        border-top-right-radius: 0;
-    }
-    .main-page .main-content{
-        width: 100vw;
-        height: auto;
-        box-sizing: border-box;
+@media(max-width:1080px){
+    .about .about-img img{
        
+        height: 100vh;
+    
     }
-    .about{
-        flex-direction: column;
-        height: auto;
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .about-div{
+        box-shadow: none;
+        width: 100%;
     }
     .about .about-img img{
-       border-bottom-right-radius: 0;
-       height: 60vh;
-       width: 70vw;
-       margin: auto;
-       border-radius: 2rem;
+        height: 100vh;
+     }
+}
+@media(max-width:768px){
+    .main-page{
+        height: 80vh;  
+    }
+    .main-page .main-img1 img{
+        width: 100%;
+        height: 100%;
+    }
+    .main-page p,.about p{
+        font-size: 0.8rem;
+    }
+    .main-content h2 span{
+        font-size: 4rem;
+    }
+    .main-page h2{
+        font-size: 1rem;
+    }
+    .about{
+        height: auto;
     }
     .about-div{
         box-shadow: none;
     }
+    .about p{
+        width: 100%;
+    }
     .dryfruit-list,.lentils-list,.masala-list{
         height: auto;
-      flex-direction: row;
-      flex-wrap: wrap;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .dryfruits,.lentils,.masala{  
         flex-basis: calc(50% - 20px);
         height: 15rem;
     }
-    .contact{
-        flex-direction: column;
+    .address-content h4,.email-content h4,.number-content h4,.timing-content h4{
+        font-size: 1.2rem;
     }
-    .contact-details{
-        align-items: center;
+    .address-content p,.email-content p,.number-content p,.timing-content p{
+        font-size : 0.8rem;
     }
-
+    .icon i{
+        font-size: 1.2rem;
+    }
+    .contact-details input{
+        margin-right: none;
+        width: 18rem;
+    }
+    .message textarea{
+        width: 18rem;
+    }
+   
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .about .about-img img{
+        display: none;
+    }
     .visit{
         flex-direction: column;
     }
+    .visit-content{
+        flex-direction: row;
+    }
+    .visit-content .address,.visit-content .email,.visit-content .number,.visit-content .timing{
+        flex-direction: column; 
+        margin-left: 1rem;
+    }
+    .address-content p,.email-content p,.number-content p,.timing-content p{
+        font-size : 0.9rem;
+    }
+    .contact-details input{
+        margin-right: none;
+        width: 15rem;
+    }
+    .message textarea{
+        width: 15rem;
+    }
+  }
+  
 
-        .visit-content {
-            flex-direction: row;
-            flex-wrap: wrap;
-          }
-        
-          .visit-content > div {
-            flex: 1 0 calc(50% - 2rem); /* Make each main div take up half of the container width with some spacing */
-            margin: 0.5rem; 
-          }
+@media(max-width:480px){
+    .visit-content .address,.visit-content .email,.visit-content .number,.visit-content .timing{
+        flex-direction: column; 
+        margin-left: 0.5rem;
+    }
+    .contact-details input{
+        margin-right: none;
+        width: 12rem;
+    }
+    .message textarea{
+        width: 12rem;
+    }
 }

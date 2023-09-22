@@ -13,7 +13,7 @@
   <body >
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
+            <div class="container-fluid p-0 m-0">
               <a class="navbar-brand" href="#" style="font-family: cursive; box-shadow: 2px 1px 2px #888888; border-radius: 50%;">Vaishno Kirana Store&nbsp;</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,20 +21,25 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about">About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="#products">Products</a>
                   </li>
                 
                 </ul>
                 <form class="d-flex" role="search">
-                  <button class="btn btn-outline-success" type="submit">Visit Us</button>
-                
-                  <button class="btn btn-outline-success" type="submit">Contact Us</button>
+                  <a href="#visitus">
+                    <button class="btn btn-outline-success">Visit Us</button>
+                  </a>
+                  
+                  <a href="#contactus">
+                    <button class="btn btn-outline-success">Contact Us</button>
+                  </a>
+                  
                 </form>
               </div>
             </div>
@@ -42,18 +47,18 @@
     </header>
     <main>
        
-        <div class="container-fluid main-page">
-            <div class="col-lg-6 col-md-6 col-sm-12 main-img1">
+        <div class="container-fluid main-page" id="home">
+            <div class="col-lg-6 col-md-6 col-sm-6 main-img1">
                 <img class="p-0 m-0" src="./images/img13.jpeg" alt="">
             </div>       
-            <div class="col-lg-6 col-md-6 col-sm-12 main-content">
+            <div class="col-lg-6 col-md-6 col-sm-6 main-content">
                 <!-- <p>Discover the Essence of Nature in Every Aisle –</p> -->
                 <h2><span>V</span>AISHNO KIRANA STORE&nbsp;&nbsp;</h2>
                 <p> Your Trusted Source for Pure and Wholesome Pulses and Dry Fruits!</p>
             </div>
         </div>
-        <div class="container-fluid about">
-            <div class="col-md-6 col-sm-12 mt-5">
+        <div class="container-fluid about" id="about">
+            <div class="col-md-6 col-sm-12 ">
                <div class="about-div">
                     <h2>ABOUT US&nbsp;&nbsp;</h2>
                     <p>For over 50 years, we've been your neighborhood's go-to destination for all your daily needs. Our story is a simple one – a commitment to providing you with the very best.
@@ -65,23 +70,23 @@
                     Thank you for being a part of our journey. We look forward to serving you for many more years to come. Here's to 50 years of trust, and many more to follow!"</p>
                </div>                  
             </div>
-            <div class="col-md-6 col-sm-12 about-img"><img class="p-0 m-0" src="./images/img1.jpeg" alt=""></div>
+            <div class="col-md-6 about-img"><img class="p-0 m-0" src="./images/imgmain.jpeg" alt=""></div>
         </div>
-        <div class="container-fluid products pt-4 mt-2">
+        <div class="container-fluid products pt-lg-4 pt-sm-0 mt-2" id="products">
             <div class="product-heading">
               Products we Sell 
             </div>
-            <div class="dryfruit-list mt-5 col-12">
-                <div class="col-md-3 col-sm-6 dryfruits">
+            <div class="dryfruit-list mt-5">
+                <div class="col-md-3 col-sm-8 dryfruits">
                   <img src="./images/img6.webp" alt="">
                 </div>
-                <div class="col-md-3 col-sm-6 dryfruits">
+                <div class="col-md-3 col-sm-8 dryfruits">
                   <img src="./images/img7.jpeg" alt="">
                 </div>
-                <div class="col-md-3 col-sm-6 dryfruits">
+                <div class="col-md-3 col-sm-8 dryfruits">
                   <img src="./images/walnut.avif" alt="">
                 </div>
-                <div class="col-md-3 col-sm-6 dryfruits">
+                <div class="col-md-3 col-sm-8 dryfruits">
                   <img src="./images/raisin.jpeg" alt="">
                 </div>
               </div>
@@ -114,7 +119,7 @@
                 <img src="./images/masala3.avif" alt="">
               </div>
             </div>
-            <div class="visit mt-5">
+            <div class="visit mt-5" id="visitus">
               <div class="col-lg-6 col-md-6 col-sm-12 visit-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.783737811639!2d78.62010127555462!3d28.395599175795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390b27cf80d52daf%3A0xc7bffe03ebd0244a!2sVaishno%20Kirana%20Store!5e0!3m2!1sen!2sin!4v1695098588973!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
               </div>
@@ -128,7 +133,7 @@
                     <p>Purana Bajar, Bahjoi, UttarPradesh</p>
                   </div>
                 </div>
-                <div class="email mt-lg-3 ">
+                <div class="email mt-3 ">
                   <div class="icon ">
                     <i class="fa-sharp fa-solid fa-envelope"></i>
                   </div>
@@ -137,7 +142,7 @@
                     <p>nikunjvar2002@gmail.com</p>
                   </div>
                 </div>
-                <div class="number mt-lg-3">
+                <div class="number mt-3">
                   <div class="icon ">
                     <i class="fa-sharp fa-solid fa-phone"></i>
                   </div>
@@ -146,7 +151,7 @@
                     <p>+91 8279499175</p>
                   </div>
                 </div>
-                <div class="timing mt-lg-3">
+                <div class="timing mt-3">
                   <div class="icon ">
                     <i class="fa-sharp fa-solid fa-clock"></i>
                   </div>
@@ -158,23 +163,65 @@
                 </div>
               </div>
             </div>
-            <div>Contact</div>
-            <div class="contact">
-              <div class="col-lg-6 col-md-6 col-sm-12 contact-details">
+            
+            <div class="contact" id="contactus">
+              <div class="col-lg-6 col-md-6 col-sm-6 contact-details">
                 <input type="text" placeholder="Full Name">
                 <input type="text" placeholder="Mobile Number">
                 <input type="text" placeholder="Email Id">
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 message m-0 p-md-0 p-sm-0">
-                <textarea placeholder="Enter message"></textarea>
+              <div class="col-lg-6 col-md-6 col-sm-6 message">
+                <textarea placeholder="Enter Message"></textarea>
               </div>
             </div>
           </div>
         </div>
     </main>
     <footer>
-
+      <div class="footer-links mt-lg-5 mt-md-5">
+        <h4>Useful Links</h4>
+        <a href="#home"><p>Home</p></a>
+        <a href="#about"><p>About</p></a>
+        <a href="#products"><p>Products</p></a>
+        <a href="#contactus"><p>ContactUs</p></a>
+      </div>
+      <div class="footer-address mt-lg-5 mt-md-5">
+        <h4>Contact</h4>
+        <p><i class="fa-sharp fa-solid fa-location-arrow"></i>&nbsp;Purana Bajar, Bahjoi, 244410, UttarPradesh</p>
+        <p><i class="fa-sharp fa-solid fa-phone"></i>&nbsp;+91 8279499175</p>
+        <p><i class="fa-sharp fa-solid fa-envelope"></i>&nbsp;nikunjvar2002@gmail.com</p>
+      </div>
+      
     </footer>
+    <script>
+      // Smooth scrolling function
+      function smoothScroll(target) {
+        const element = document.querySelector(target);
+        if (element) {
+          window.scrollTo({
+            top: element.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      }
+    
+      // Event listener for clicking "Visit Us" link
+      const visitUsLink = document.querySelector('a[href="#visitus"]');
+      if (visitUsLink) {
+        visitUsLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          smoothScroll('#visitus');
+        });
+      }
+      const contactUsLink = document.querySelector('a[href="#contactus"]');
+      if (contactUsLink) {
+        contactUsLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          smoothScroll('#contactus');
+        });
+      }
+    </script>
+    
     <script src="https://kit.fontawesome.com/ef5a3b8ab6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
